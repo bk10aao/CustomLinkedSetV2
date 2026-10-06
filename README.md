@@ -8,51 +8,50 @@ All methods implemented are identical to those found in the Java Set interface.
 
 To build and test the project run command `./gradlew clean build`
 
-# Time Complexity
+## Time Complexity
 
-| Method                        |     Custom      |        JDK        | Winner  |
-|:------------------------------|:---------------:|:-----------------:|:-------:|
-| **`add(E)`**                  |     $O(1)$      |      $O(1)$       | **Tie** |
-| **`addAll(Collection)`**      |     $O(M)$      |      $O(M)$       | **Tie** |
-| **`clear()`**                 |     $O(N)$      |      $O(N)$       | **Tie** |
-| **`clone()`**                 |     $O(N)$      |      $O(N)$       | **Tie** |
-| **`contains(Object)`**        |     $O(1)$      |      $O(1)$       | **Tie** |
-| **`containsAll(Collection)`** |     $O(M)$      |      $O(M)$       | **Tie** |
-| **`equals(Object)`**          |     $O(N)$      |      $O(N)$       | **Tie** |
-| **`hashCode()`**              |     $O(N)$      |      $O(N)$       | **Tie** |
-| **`isEmpty()`**               |     $O(1)$      |      $O(1)$       | **Tie** |
-| **`iterator()`**              |     $O(1)$      |      $O(1)$       | **Tie** |
-| **`remove(Object)`**          |     $O(1)$      |      $O(1)$       | **Tie** |
-| **`removeAll(Collection)`**   | $O(N \times M)$ |  $O(N \times M)$  | **Tie** |
-| **`retainAll(Collection)`**   | $O(N \times M)$ |  $O(N \times M)$  | **Tie** |
-| **`size()`**                  |     $O(1)$      |      $O(1)$       | **Tie** |
-| **`spliterator()`**           |     $O(1)$      |      $O(1)$       | **Tie** |
-| **`toArray()`**               |     $O(N)$      |      $O(N)$       | **Tie** |
-| **`toArray(T[])`**            |     $O(N)$      |      $O(N)$       | **Tie** |
-| **`toString()`**              |     $O(N)$      |      $O(N)$       | **Tie** |
+| Method                        | Custom      | JDK         | Winner |
+|-------------------------------|-------------|-------------|--------|
+| `add(E)`                      | $O(n)$      | $O(n)$      | Tie    |
+| `addAll(Collection)`          | $O(n * m)$  | $O(n * m)$  | Tie    |
+| `clear()`                     | $O(n)$      | $O(n)$      | Tie    |
+| `clone()`                     | $O(n)$      | $O(n)$      | Tie    |
+| `contains(Object)`            | $O(n)$      | $O(n)$      | Tie    |
+| `containsAll(Collection)`     | $O(n * m)$  | $O(n * m)$  | Tie    |
+| `equals(Object)`              | $O(n)$      | $O(n)$      | Tie    |
+| `hashCode()`                  | $O(n)$      | $O(n)$      | Tie    |
+| `isEmpty()`                   | $O(1)$      | $O(1)$      | Tie    |
+| `iterator()`                  | $O(1)$      | $O(1)$      | Tie    |
+| `remove(Object)`              | $O(n)$      | $O(n)$      | Tie    |
+| `removeAll(Collection)`       | $O(n * m)$  | $O(n * m)$  | Tie    |
+| `retainAll(Collection)`       | $O(n * m)$  | $O(n * m)$  | Tie    |
+| `size()`                      | $O(1)$      | $O(1)$      | Tie    |
+| `spliterator()`               | $O(1)$      | $O(1)$      | Tie    |
+| `toArray()`                   | $O(n)$      | $O(n)$      | Tie    |
+| `toArray(T[])`                | $O(n)$      | $O(n)$      | Tie    |
+| `toString()`                  | $O(n)$      | $O(n)$      | Tie    |
 
 # Space Complexity
-
-| Method                        | Custom |  JDK   |  Winner  |
-|:------------------------------|:------:|:------:|:--------:|
-| **`add(E)`**                  | $O(1)$ | $O(1)$ | **Tie**  |
-| **`addAll(Collection)`**      | $O(1)$ | $O(1)$ | **Tie**  |
-| **`clear()`**                 | $O(1)$ | $O(1)$ | **Tie**  |
-| **`clone()`**                 | $O(N)$ | $O(N)$ | **Tie**  |
-| **`contains(Object)`**        | $O(1)$ | $O(1)$ | **Tie**  |
-| **`containsAll(Collection)`** | $O(1)$ | $O(1)$ | **Tie**  |
-| **`equals(Object)`**          | $O(1)$ | $O(1)$ | **Tie**  |
-| **`hashCode()`**              | $O(1)$ | $O(1)$ | **Tie**  |
-| **`isEmpty()`**               | $O(1)$ | $O(1)$ | **Tie**  |
-| **`iterator()`**              | $O(1)$ | $O(1)$ | **Tie**  |
-| **`remove(Object)`**          | $O(1)$ | $O(1)$ | **Tie**  |
-| **`removeAll(Collection)`**   | $O(1)$ | $O(1)$ | **Tie**  |
-| **`retainAll(Collection)`**   | $O(1)$ | $O(1)$ | **Tie**  |
-| **`size()`**                  | $O(1)$ | $O(1)$ | **Tie**  |
-| **`spliterator()`**           | $O(1)$ | $O(1)$ | **Tie**  |
-| **`toArray()`**               | $O(N)$ | $O(N)$ | **Tie**  |
-| **`toArray(T[])`**            | $O(N)$ | $O(N)$ | **Tie**  |
-| **`toString()`**              | $O(N)$ | $O(N)$ | **Tie**  |
+| Method                        | Custom  | JDK    | Winner |
+|-------------------------------|---------|--------|--------|
+| `add(E)`                      | $O(1)$  | $O(1)$ | Tie    |
+| `addAll(Collection)`          | $O(m)$  | $O(m)$ | Tie    |
+| `clear()`                     | $O(1)$  | $O(1)$ | Tie    |
+| `clone()`                     | $O(n)$  | $O(n)$ | Tie    |
+| `contains(Object)`            | $O(1)$  | $O(1)$ | Tie    |
+| `containsAll(Collection)`     | $O(1)$  | $O(1)$ | Tie    |
+| `equals(Object)`              | $O(1)$  | $O(1)$ | Tie    |
+| `hashCode()`                  | $O(1)$  | $O(1)$ | Tie    |
+| `isEmpty()`                   | $O(1)$  | $O(1)$ | Tie    |
+| `iterator()`                  | $O(1)$  | $O(1)$ | Tie    |
+| `remove(Object)`              | $O(1)$  | $O(1)$ | Tie    |
+| `removeAll(Collection)`       | $O(1)$  | $O(1)$ | Tie    |
+| `retainAll(Collection)`       | $O(1)$  | $O(1)$ | Tie    |
+| `size()`                      | $O(1)$  | $O(1)$ | Tie    |
+| `spliterator()`               | $O(1)$  | $O(1)$ | Tie    |
+| `toArray()`                   | $O(n)$  | $O(n)$ | Tie    |
+| `toArray(T[])`                | $O(n)$  | $O(n)$ | Tie    |
+| `toString()`                  | $O(n)$  | $O(n)$ | Tie    |
 
 **Notes**:
 - n: Total number of elements currently stored within the set.
