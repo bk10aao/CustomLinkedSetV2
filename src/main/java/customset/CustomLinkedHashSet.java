@@ -32,6 +32,7 @@ import static java.util.Objects.requireNonNull;
 public class CustomLinkedHashSet<E> implements Set<E>, Cloneable {
 
     private LinkedHashMap<E, Object> set;
+
     private static final Object PRESENT = new Object();
 
     /**
@@ -95,7 +96,7 @@ public class CustomLinkedHashSet<E> implements Set<E>, Cloneable {
      */
     public CustomLinkedHashSet(final int initialCapacity, final float loadFactor) {
         if(initialCapacity < 0 || loadFactor <= 0 || Float.isNaN(loadFactor))
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Illegal initial capacity: " + initialCapacity);
         set = new LinkedHashMap<>(initialCapacity, loadFactor);
     }
 
